@@ -1,0 +1,7 @@
+<Configuration>
+<VGpu>Default</VGpu>
+<Networking>Default</Networking>
+<LogonCommand>
+     <Command>powershell -Command "net user 'Administrator' /active:yes; reg add 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa' /v LimitBlankPasswordUse /t REG_DWORD /d 1 /f; Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')); choco install -y 7zip.install --pre"</Command>
+</LogonCommand>
+</Configuration>
